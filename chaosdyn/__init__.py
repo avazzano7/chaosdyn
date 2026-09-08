@@ -1,4 +1,4 @@
-from chaosdyn.systems import Lorenz
+from .systems import Lorenz
 
 __version__ = "0.1.0"
 

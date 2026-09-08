@@ -1,3 +1,3 @@
-from systems.lorenz import Lorenz
+from .lorenz import Lorenz
 
 __all__ = ["Lorenz"]
