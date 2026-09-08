@@ -2,11 +2,9 @@ from __future__ import annotations
 
 import numpy as np
 
-from chaosdyn.systems.base import DynamicalSystem
-
 
 def rk4_step(
-    system: DynamicalSystem,
+    system,
     t: float,
     state: np.ndarray,
     dt: float,

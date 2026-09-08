@@ -1,9 +1,7 @@
 import numpy as np
 
-from .base import DynamicalSystem
 
-
-class Lorenz(DynamicalSystem):
+class Lorenz:
     """
     The Lorenz system.
 
@@ -17,8 +15,10 @@ class Lorenz(DynamicalSystem):
     ----------
     sigma:
         Prandtl number.
+
     rho:
         Rayleigh number.
+
     beta:
         Geometric factor.
     """
@@ -35,9 +35,11 @@ class Lorenz(DynamicalSystem):
 
     @property
     def dimension(self) -> int:
+        """Number of state variables in the system."""
         return 3
 
     def derivatives(self, t: float, state: np.ndarray) -> np.ndarray:
+        """Calculate the time derivative of the system state."""
         x, y, z = state
 
         dx = self.sigma * (y - x)
